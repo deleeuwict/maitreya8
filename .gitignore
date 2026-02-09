@@ -1,0 +1,26 @@
+# 1. Ignore absolutely everything by default
+*
+
+# 2. But do NOT ignore directories (so Git can look inside them for your code)
+!*/
+
+# 3. Whitelist your specific code and build files
+!*.c
+!*.cpp
+!*.h
+!*.am
+!*.ac
+!*.sh
+!*.txt
+
+# 4. Whitelist the Git files themselves
+!.gitignore
+!README*
+
+# 5. Specifically RE-IGNORE the things you definitely don't want
+# (This handles the "Makefile" vs "Makefile.am" confusion)
+Makefile
+config.log
+config.status
+.deps/
+.libs/
